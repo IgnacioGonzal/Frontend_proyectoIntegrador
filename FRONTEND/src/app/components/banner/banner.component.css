@@ -1,0 +1,32 @@
+img{
+    max-width: 100%;
+    height: auto;    
+}
+
+.row{
+    background:#d3c79bbe;
+}
+
+@media (min-width: 576px) {
+
+#fotoDePerfil {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    width:20%;
+    border-radius: 100%;
+    left: 40%;
+    top: 73%;
+    }    }
+
+    @media (max-width: 575px) {
+
+        #fotoDePerfil {
+            display: flex;
+            text-align: center;
+            position: absolute;
+            width:20%;
+            border-radius: 100%;
+            left: 40%;
+            top: 60%;
+            }    }

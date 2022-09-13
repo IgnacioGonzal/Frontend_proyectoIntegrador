@@ -1,0 +1,24 @@
+.row {
+    background-color:#c4b789cc;
+    margin-left:5px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.container-principal {
+    width: 100%;
+}
+
+li {
+    border-radius: 2%;
+    border-radius: black;
+    list-style: none;
+    margin-top: .5rem;
+    width: auto;
+    padding-bottom: .5rem;
+    padding-right: 1rem;
+    border-bottom: .05rem outset rgba(0, 0, 3, 0.447);
+    float: left;
+}

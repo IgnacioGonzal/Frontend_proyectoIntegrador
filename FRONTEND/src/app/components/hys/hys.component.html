@@ -1,0 +1,68 @@
+
+      <div class="row">      
+          <h1>Hard y Soft Skills</h1>
+        </div>
+        <div class="row" background="red" >
+          <button
+            type="button"
+            class="btn btn-dark"
+            routerLink="/newskill"
+            
+            *ngIf="isLogged"
+          >
+
+         
+            Presiona aqui para agregar una habilidad
+          </button>
+        </div>
+      
+      
+      <div style="background-color:#c4b789cc" class="row" *ngIf="skills.length == 0">
+        <p style="color: rgb(0, 0, 0)">No hay skills para mostrar</p>
+      </div>
+  
+      <div class="row">
+        <!--  -->
+        <div class="row">
+          <ul>
+            <li *ngFor="let Skills of skills">
+              <div class="col-12 col-sm my-">
+                <div class="row">
+                  <circle-progress
+                    [percent]="Skills.porcentaje"
+                    [outerStrokeColor]="Skills.colorExterno"
+                    [innerStrokeColor]="Skills.colorInterno"
+                    [imageSrc]="Skills.imgsrc"
+                    [title]="Skills.nombreSkills"
+                  ></circle-progress>
+                </div>
+                <div class="row">
+                  <p>{{ Skills.nombreSkills }}</p>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <button
+                      *ngIf="isLogged"
+                      class="btn btn-light bi bi-pencil-fill"
+                      routerLink="/editskill/{{ Skills.id }}"
+                    >
+                      Editar
+                    </button>
+                  </div>
+                  <div class="col-6">
+                    <button
+                      *ngIf="isLogged"
+                      class="btn btn-danger bi bi-trash-fill"
+                      (click)="deleteSkills(Skills.id)"
+                    >
+                      Borrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  
