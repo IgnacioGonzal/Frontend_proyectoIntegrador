@@ -19,7 +19,7 @@ export class PersonaService {
   }
 
   public editarPersona(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(`${this.URL}/editar`, persona);
+    return this.http.put<Persona>(`${this.URL} editar`, persona);
   }
 }
 
