@@ -10,7 +10,7 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL= 'http://localhost:8080/personas/';
+  URL= 'https://backendignag.herokuapp.com/personas/';
   
   constructor(private http: HttpClient) { }
 
@@ -19,7 +19,7 @@ export class PersonaService {
   }
 
   public editarPersona(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(`${this.URL} editar`, persona);
+    return this.http.put<Persona>(this.URL+"editar/"+persona.id, persona);
   }
 }
 

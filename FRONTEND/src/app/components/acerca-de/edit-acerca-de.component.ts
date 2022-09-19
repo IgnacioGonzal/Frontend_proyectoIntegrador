@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EditAcercaDeComponent implements OnInit {
 
-  persona: Persona;
+  persona: Persona = new Persona("","","","");
 
   constructor(
     public personaService: PersonaService,
