@@ -10,25 +10,25 @@ import { Educacion } from '../model/educacion';
 export class EducacionService {
   URL = 'https://backendignag.herokuapp.com/educacion/';
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Educacion[]>{
+  public lista(): Observable<Educacion[]> {
     return this.httpClient.get<Educacion[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<Educacion>{
+  public detail(id: number): Observable<Educacion> {
     return this.httpClient.get<Educacion>(this.URL + `detail/${id}`);
   }
 
-  public save(educacion: Educacion): Observable<any>{
+  public save(educacion: Educacion): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'create', educacion);
   }
 
-  public update(id: number, educacion: Educacion): Observable<any>{
+  public update(id: number, educacion: Educacion): Observable<any> {
     return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }

@@ -1,19 +1,21 @@
 .row {
     padding: 20px;
-    background-color:#c4b789cc;
-    margin-left:5px;
+    background-color: #c4b789cc;
+    margin-left: 5px;
 }
 
 .conteiner {
-    width: 50px;;
+    width: 50px;
+    ;
 }
 
-.parte1, .parte2 {
+.parte1,
+.parte2 {
     display: inline-block;
-    text-align:justify;
+    text-align: justify;
 }
 
-.img-proyecto{
+.img-proyecto {
     box-shadow: 10px 30px 30px #000000;
 }
 
@@ -25,4 +27,3 @@ p {
     font-family: 'Alata', sans-serif;
 
 }
-

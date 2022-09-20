@@ -11,14 +11,14 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EditAcercaDeComponent implements OnInit {
 
-  persona: Persona = new Persona("","","","");
+  persona: Persona = new Persona("", "", "", "");
 
   constructor(
     public personaService: PersonaService,
     private tokenService: TokenService,
     private activatedRouter: ActivatedRoute,
     private router: Router
-  ) {}
+  ) { }
 
   isLogged = false;
 
@@ -33,7 +33,7 @@ export class EditAcercaDeComponent implements OnInit {
       this.isLogged = false;
     }
   }
- 
+
   onUpdate(): void {
     //para deshabilitar el envío de formularios si hay campos no válidos
     (function () {

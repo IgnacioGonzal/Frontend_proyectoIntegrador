@@ -10,22 +10,23 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  persona: Persona = new Persona("","","","") ;
- 
-  
+  persona: Persona = new Persona("", "", "", "");
+
+
   constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
   isLogged = false;
 
   ngOnInit(): void {
     this.personaService.getPersona().subscribe(data => {
-      this.persona = data})
-    
+      this.persona = data
+    })
 
-  if (this.tokenService.getToken()) {
-    this.isLogged = true;
-  } else {
-    this.isLogged = false;
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
-}
 }

@@ -9,9 +9,9 @@ import { SProyectosService } from 'src/app/service/s-proyectos.service';
   styleUrls: ['./new-proyectos.component.css']
 })
 export class NewProyectosComponent implements OnInit {
-  nombreP:string = '';
-  descripcionP:string = '';
-  imgP:string = ''
+  nombreP: string = '';
+  descripcionP: string = '';
+  imgP: string = ''
 
   constructor(private sProyectos: SProyectosService, private router: Router) { }
 
@@ -19,7 +19,7 @@ export class NewProyectosComponent implements OnInit {
   }
 
   onCreate(): void {
-    const proyect = new Proyectos(this.nombreP, this.descripcionP,this.imgP);
+    const proyect = new Proyectos(this.nombreP, this.descripcionP, this.imgP);
     this.sProyectos.save(proyect).subscribe(
       data => {
         alert("Proyecto añadido");

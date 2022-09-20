@@ -13,15 +13,15 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 
 const routes: Routes = [
-  {path:'',component: HomeComponent},
-  {path:'login',component: LoginComponent},
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'editAbout/:id', component: EditAcercaDeComponent },
-  { path: 'nuevaexp', component: NewExperienciaComponent},
-  { path: 'editexp/:id', component: NewExperienciaComponent},
-  { path: 'nuevaedu', component: NeweducacionComponent},
-  { path: 'editedu/:id', component: EditeducacionComponent},
-  { path: 'nuevoproyecto', component: NewProyectosComponent},
-  { path: 'editproyectos/:id', component: EditProyectosComponent},
+  { path: 'nuevaexp', component: NewExperienciaComponent },
+  { path: 'editexp/:id', component: NewExperienciaComponent },
+  { path: 'nuevaedu', component: NeweducacionComponent },
+  { path: 'editedu/:id', component: EditeducacionComponent },
+  { path: 'nuevoproyecto', component: NewProyectosComponent },
+  { path: 'editproyectos/:id', component: EditProyectosComponent },
   { path: 'newskill', component: NewHysComponent },
   { path: 'editskill/:id', component: EditHysComponent }
 ];

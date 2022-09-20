@@ -1,10 +1,9 @@
-.breaker{
-    background-color : #d3d3d39f;;
-    border : 5px ridge rgb(1, 0, 5);
-    
-  }
-  div {
-    margin-left: 5px;
-  }
+.breaker {
+  background-color: #d3d3d39f;
+  border: 5px ridge rgb(1, 0, 5);
 
- 
+}
+
+div {
+  margin-left: 5px;
+}

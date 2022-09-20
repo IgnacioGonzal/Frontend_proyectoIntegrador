@@ -1,15 +1,15 @@
 .row {
     padding: 20px;
-    background:#c4b789cc;
-    margin-left:5px;
+    background: #c4b789cc;
+    margin-left: 5px;
 }
 
-#encabezado{
+#encabezado {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-color:#c4b789cc ;
+    background-color: #c4b789cc;
 }
 
 
@@ -19,11 +19,12 @@
 #nombre {
     font-size: 25px;
     font-weight: bold;
-    margin-top: 5% ;
+    margin-top: 5%;
     margin-left: 10px;
 }
 
-h1 ,p { 
+h1,
+p {
     text-align: center;
 }
 
@@ -37,12 +38,13 @@ h4 {
 }
 
 
-.parte1, .parte2 {
+.parte1,
+.parte2 {
     display: inline-block;
-    text-align:justify;
+    text-align: justify;
 }
 
-.foto-perfil{
+.foto-perfil {
     width: 100%;
     max-width: 200px;
     height: auto;

@@ -12,13 +12,13 @@ export class NewHysComponent implements OnInit {
 
   nombreSkills: string;
   imgsrc: string;
-  colorInterno: string='#FAD7A0';
-  colorExterno: string ='#E67E22';
+  colorInterno: string = '#FAD7A0';
+  colorExterno: string = '#E67E22';
   porcentaje: number;
 
-  constructor(private skillService: SkillsService, private router: Router) {}
+  constructor(private skillService: SkillsService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onCreate(): void {
     const skills = new Skills(

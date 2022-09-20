@@ -9,7 +9,7 @@ import { SProyectosService } from 'src/app/service/s-proyectos.service';
   styleUrls: ['./edit-proyectos.component.css']
 })
 export class EditProyectosComponent implements OnInit {
-  proyectosLab : Proyectos = null;
+  proyectosLab: Proyectos = null;
 
   constructor(private sProyectos: SProyectosService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
@@ -18,23 +18,23 @@ export class EditProyectosComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sProyectos.detail(id).subscribe(
-      data =>{
+      data => {
         this.proyectosLab = data;
-      }, err =>{
+      }, err => {
         alert("Error al modificar el proyecto");
         this.router.navigate(['']);
       }
     )
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sProyectos.update(id, this.proyectosLab).subscribe(
       data => {
         this.router.navigate(['']);
-      }, err =>{
-         alert("Error al modificar el proyecto");
-         this.router.navigate(['']);
+      }, err => {
+        alert("Error al modificar el proyecto");
+        this.router.navigate(['']);
       }
     )
   }

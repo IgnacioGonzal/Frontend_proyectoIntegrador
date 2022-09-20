@@ -1,40 +1,24 @@
-<div class="container-fluid" id="encabezado"> 
-<div class="row no-gutters mb-2 pb-1 align-items-start">
+<div class="container-fluid" id="encabezado">
+  <div class="row no-gutters mb-2 pb-1 align-items-start">
 
-        <div class="col-12 col-sm-3 d-inline-block position-relative text-center">
-            <img
-              class="img-fluid foto-perfil"
-              id="img"
-              name="img"
-              src="{{persona.img}}"
-              alt="Foto Perfil Ignacio Gonzalez"
-            />
-          </div>
-
- 
-        <div class="col-12 col-sm-4 text-center">
-            <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-            <h4>Full Stack Developer JR</h4>
-        </div>
-
-        
-        <div class="col-12 col-sm-5" id="ir-acerca-de">
-            <h2 class="text-center mt-1">Acerca de mi:</h2>
-            <p id="about" class="text-start">{{ persona.about }}</p>
-            <button
-              type="button"
-              class="btn btn-outline-secondary bi bi-pencil-square"
-              *ngIf="isLogged"
-              routerLink="/editAbout/{{ persona.id }}"
-              title="Editar"
-            >
-              Editar
-            </button>
-          </div>
-        </div>
-      </div>
+    <div class="col-12 col-sm-3 d-inline-block position-relative text-center">
+      <img class="img-fluid foto-perfil" id="img" name="img" src="{{persona.img}}" alt="Foto Perfil Ignacio Gonzalez" />
+    </div>
 
 
-   
+    <div class="col-12 col-sm-4 text-center">
+      <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
+      <h4>Full Stack Developer JR</h4>
+    </div>
 
 
+    <div class="col-12 col-sm-5" id="ir-acerca-de">
+      <h2 class="text-center mt-1">Acerca de mi:</h2>
+      <p id="about" class="text-start">{{ persona.about }}</p>
+      <button type="button" class="btn btn-outline-secondary bi bi-pencil-square" *ngIf="isLogged"
+        routerLink="/editAbout/{{ persona.id }}" title="Editar">
+        Editar
+      </button>
+    </div>
+  </div>
+</div>

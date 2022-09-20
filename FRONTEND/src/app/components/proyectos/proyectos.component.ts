@@ -9,38 +9,38 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-    Proyectos: Proyectos[] = [];
+  Proyectos: Proyectos[] = [];
 
   constructor(private sProyectos: SProyectosService, private tokenService: TokenService) { }
 
   isLogged = false;
 
 
-    ngOnInit(): void {
-      this.cargarProyectos();
-      if(this.tokenService.getToken()){
-        this.isLogged = true;
-      } else {
-        this.isLogged = false;
-      }
-    }
-  
-    cargarProyectos(): void{
-      this.sProyectos.lista().subscribe(data =>{this.Proyectos = data;})
-    }
-
- 
-  
-    delete(id?: number){
-      if( id != undefined){
-        this.sProyectos.delete(id).subscribe(
-          data => {
-            this.cargarProyectos();
-          }, err => {
-            alert("No se pudo eliminar");
-          }
-        )
-      }
+  ngOnInit(): void {
+    this.cargarProyectos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
     }
   }
+
+  cargarProyectos(): void {
+    this.sProyectos.lista().subscribe(data => { this.Proyectos = data; })
+  }
+
+
+
+  delete(id?: number) {
+    if (id != undefined) {
+      this.sProyectos.delete(id).subscribe(
+        data => {
+          this.cargarProyectos();
+        }, err => {
+          alert("No se pudo eliminar");
+        }
+      )
+    }
+  }
+}
 

@@ -15,35 +15,37 @@ export class HysComponent implements OnInit {
 
 
   isLogged = false;
- 
+
 
   ngOnInit(): void {
     this.cargarSkills();
-    if (this.tokenService.getToken()){
-      this.isLogged=true;
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
     }
     else {
       this.isLogged = false;
     }
   }
 
-    cargarSkills(): void {
-      this.skillsS.lista().subscribe(
-        data =>{
-          this.skills = data;
-        }
-      )      
-    }
-
-    deleteSkills(id?: number): void {
-      if(id != undefined){
-        this.skillsS.delete(id).subscribe(data =>{this.cargarSkills();
-        }, err => {alert("no se pudo eliminar");
+  cargarSkills(): void {
+    this.skillsS.lista().subscribe(
+      data => {
+        this.skills = data;
       }
     )
   }
-}
+
+  deleteSkills(id?: number): void {
+    if (id != undefined) {
+      this.skillsS.delete(id).subscribe(data => {
+        this.cargarSkills();
+      }, err => {
+        alert("no se pudo eliminar");
+      }
+      )
+    }
+  }
 }
 
-  
+
 

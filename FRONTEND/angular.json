@@ -30,7 +30,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -57,7 +58,14 @@
             },
             "development": {
               "buildOptimizer": false,
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
@@ -105,6 +113,6 @@
     }
   },
   "cli": {
-    "analytics": "dbf5f4b3-5818-4ef1-9e3e-190528433cca"
+    "analytics": "false"
   }
 }
