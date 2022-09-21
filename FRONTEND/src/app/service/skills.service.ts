@@ -17,7 +17,7 @@ export class SkillsService {
   }
 
   public listaPorId(id: number): Observable<Skills> {
-    return this.httpClient.get<Skills>(`${this.skillsURL} 'traer/${id}`);
+    return this.httpClient.get<Skills>(`${this.skillsURL}traer/${id}`);
   }
 
   public detail(id: number): Observable<Skills> {
