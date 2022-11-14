@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'editAbout/:id', component: EditAcercaDeComponent },
   { path: 'nuevaexp', component: NewExperienciaComponent },
-  { path: 'editexp/:id', component: NewExperienciaComponent },
+  { path: 'editexp/:id', component: EditExperienciaComponent },
   { path: 'nuevaedu', component: NeweducacionComponent },
   { path: 'editedu/:id', component: EditeducacionComponent },
   { path: 'nuevoproyecto', component: NewProyectosComponent },

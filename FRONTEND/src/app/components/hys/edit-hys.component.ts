@@ -19,7 +19,7 @@ export class EditHysComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillService.listaPorId(id).subscribe((data) => {
+    this.skillService.detail(id).subscribe((data) => {
       this.skill = data;
     });
   }
